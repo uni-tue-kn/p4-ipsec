@@ -1,0 +1,19 @@
+{
+    "controller_config": {
+        "p4info": "../p4/p4/build/basic.p4info",
+        "bmv2_json" : "../p4/p4/build/basic.json"
+    },
+
+    "switches": [
+        {
+            "name": "s1",
+            "address": "127.0.0.1:50051",
+            "device_id": 0
+        },
+        {
+            "name": "s2",
+            "address": "127.0.0.1:50052",
+            "device_id": 1
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "type": "site-to-site",
+    "allowed-traffic": "ICMP",
+    "left": {
+      "switch": "s1",
+      "endpoint-ipv4": "10.0.1.1",
+      "network-resource": "192.168.1.10"
+    },
+    "right": {
+      "switch": "s2",
+      "endpoint-ipv4": "10.0.2.1",
+      "network-resource": "192.168.2.10"
+    },
+    "cipher-suite": "aes_ctr_hmac_md5",
+    "soft-packet-limit": 10,
+    "hard-packet-limit": 20
+}

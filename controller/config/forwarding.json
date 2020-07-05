@@ -1,0 +1,70 @@
+{
+  "s1": [
+    {
+      "table": "MyIngress.forward",
+      "match": {
+        "hdr.ipv4.dstAddr": ["192.168.1.10", 32]
+      },
+      "action_name": "MyIngress.l2_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:00:01:10",
+        "port": 1
+      }
+    },
+    {
+      "table": "MyIngress.forward",
+      "match": {
+        "hdr.ipv4.dstAddr": ["192.168.2.0", 24]
+      },
+      "action_name": "MyIngress.l2_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:00:02:01",
+        "port": 2
+      }
+    },
+    {
+      "table": "MyIngress.forward",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.2.1", 32]
+      },
+      "action_name": "MyIngress.l3_forward",
+      "action_params": {
+        "port": 2
+      }
+    }
+  ],
+  "s2" : [
+    {
+      "table": "MyIngress.forward",
+      "match": {
+        "hdr.ipv4.dstAddr": ["192.168.2.10", 32]
+      },
+      "action_name": "MyIngress.l2_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:00:02:10",
+        "port": 1
+      }
+    },
+    {
+      "table": "MyIngress.forward",
+      "match": {
+        "hdr.ipv4.dstAddr": ["192.168.1.0", 24]
+      },
+      "action_name": "MyIngress.l2_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:00:01:01",
+        "port": 2
+      }
+    },
+    {
+      "table": "MyIngress.forward",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.1.1", 32]
+      },
+      "action_name": "MyIngress.l3_forward",
+      "action_params": {
+        "port": 2
+      }
+    }
+  ]
+}
