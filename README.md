@@ -1,6 +1,6 @@
 # P4-IPsec
 
-This projects implements IPsec in BMv2 together with an controller based operation of IPsec. For details, please see the corresponding [paper](https://arxiv.org/abs/1904.07088).
+This projects implements IPsec in BMv2 together with an controller based operation of IPsec. For details, please see the corresponding [paper](https://arxiv.org/abs/1907.03593).
 
 The code in this repository is intended to work with the versions of p4c, BMv2 and PI referenced in `dependencies/user-bootstrap.sh`. More recent version are likely to break things.
 
